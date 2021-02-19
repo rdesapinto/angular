@@ -1,0 +1,22 @@
+<!--Barre de navigation-->
+<nav class="navbar navbar-default"></nav>
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+
+      <!--Le routerLink remplace le href car il permet de ne pas recharger la page contrairement au href-->
+      <!--Le routerLinkActive permet de mettre e evidence la route active-->
+      <li routerLinkActive="active"><a routerLink="auth">Authentification</a></li>
+      <li routerLinkActive="active"><a routerLink="appareils">Appareils</a></li>
+     
+    </ul>
+
+    <div class="navbar-right">
+      <p>Vous êtes connecté depuis {{ secondes }} secondes !</p>
+   </div>
+
+  </div>
+<div class="container">
+  <div class="row">
+    <router-outlet></router-outlet>
+  </div>
+</div>

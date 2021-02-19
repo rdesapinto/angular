@@ -1,0 +1,12 @@
+<h2>Authentification</h2>
+
+<!--Le ngIf permet d'afficher le bouton seulement si on est déconnecté-->
+<button class="btn btn-success" *ngIf="!authStatus" (click)="onSignIn()">
+    Se connecter
+</button>
+
+<!--Le ngIf permet d'afficher le bouton seulement si on est connecté-->
+<button class="btn btn-danger" *ngIf="authStatus" (click)="onSignOut()">
+    Se déconnecter
+</button>
+
